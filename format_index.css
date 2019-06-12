@@ -1,0 +1,177 @@
+body{
+  background-color: #eaeaea;
+}
+.Header{
+  margin: auto;
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  height: 130px;
+  background-color: #4c9141;
+}
+.MenuNav{
+  background: white;
+  float: left;
+  margin-top: 1%;
+  width: 10%;
+  height: auto;
+}
+
+.MenuNav_Item{
+  background: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 96%;
+  height: auto;
+  font-size: 20px;
+  color: white;
+  padding: 4px 2px;
+}
+
+.MenuSection_Item{
+  background: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: left;
+  width: 31%;
+  height: 290px;
+  font-size: 20px;
+  color: white;
+}
+
+.MenuSection{
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 65%;
+  height:600px;
+  border: 2px solid #cccccc;
+  overflow-y: scroll;
+  }
+.MenuAside{
+  background: white;
+  position: relative;
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 22%;
+  height:600px;
+}
+.MenuAside_Header{
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.MenuAside_Footer{
+  float: left;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 15%
+}
+
+.item_quantity {
+	background-color: white;
+	padding: 8px 10px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #cccccc;
+}
+.item_add {
+  margin-left: 1%;
+  margin-right: 1%;
+  height: auto;
+  font-size: 10px;
+  color: white;
+}
+
+.MenuAside_Checkout{
+  background-color: #5aaf4d;
+  margin-top: 1%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 8px 8px;
+  float: right;
+  width: 80%;
+}
+
+.MenuAside_Delete{
+  background-color: #ea8464;
+  margin-top: 1%;
+  color: red;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 8px 8px;
+  float: right;
+  width: 80%;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+input[type=text]{
+  background-color: #5aaf4d;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width: auto;
+}
+h1,h2, p, label {
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  padding: 8px 6px;
+  display: inline-block;
+}
+
+p{
+  font-size: 20px;
+  color: black;
+  padding: 4px 2px;
+}
+
+label {
+  font-size: 14px;
+  color: white;
+  padding: 4px 2px;
+}
+  
+input[type=button]  {
+  background-color: #5aaf4d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+input:focus {
+  background-color: #aaaaaa;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
