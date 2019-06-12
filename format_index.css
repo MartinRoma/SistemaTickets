@@ -45,9 +45,7 @@ body{
   float: left;
   margin-left: 1%;
   margin-top: 1%;
-  width: 65%;
-  height:600px;
-  overflow-y: scroll;
+  width: 100%;
   }
 .MenuAside{
   background: white;
@@ -162,10 +160,18 @@ input[type=button]  {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
 }
 
+input[type=text]  {
+  background-color: WHITE;
+  color: BLACK;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
 
 input:focus {
   background-color: #aaaaaa;
@@ -173,4 +179,11 @@ input:focus {
   border: none;
   cursor: pointer;
   opacity: 0.9;
+}
+
+.MenuSearchBar input[type=text]{
+	width: 70%;
+}
+.MenuSearchBar input[type=button]{
+	width: 30%;
 }
