@@ -1,7 +1,4 @@
 <html>
-<head>
-  <link rel="stylesheet" href="format_form.css">
-</head>
 <body>
 <?php
 
