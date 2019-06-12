@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<script type="text/javascript" src="jquery.js"></script>
-	  <script>											//NECESITA TRABAJO
+	  <script>
 		var menuNav_LastSelected = 'Entradas';
 		function menuNav(menuNav_Selected){
 			var x = document.getElementsByName(menuNav_LastSelected);
@@ -16,24 +16,24 @@
 			}
 			menuNav_LastSelected = menuNav_Selected;
 		}
-
-		  $search_value=$_POST["search"];
-$con=new mysqli($servername,$username,$password,$dbname);
-if($con->connect_error){
-    echo 'Connection Faild: '.$con->connect_error;
-    }else{
-        $sql="select * from information where First_Name like '%$search_value%'";
-
-        $res=$con->query($sql);
-
-        while($row=$res->fetch_assoc()){
-            echo 'First_name:  '.$row["First_Name"];
-
-
-            }       
-
-        }
-?>
+		function searchDatabase($search_value){	
+			//INCLUIR CREDENCIALES PARA LOGEARSE A SERVIDOR
+			$dbhost = 'localhost';
+			$dbuser = 'root';
+			$dbpass = '';
+			$dbname = "restaurant";
+			$con = new mysqli($dbhost, $dbuser, $dbpass, $dbname);  
+			if($con->connect_error){
+				echo 'Connection Faild: '.$con->connect_error;
+			}else{
+				$sql="SELECT * FROM 'Servicio Tecnico' WHERE 'NOMBRE DISPOSITIVO' like '%$search_value%'";
+				$res=$con->query($sql);
+				while($row=$res->fetch_assoc()){
+					echo .$row["First_Name"];
+				}
+			}
+		}
+		?>
 	  </script>
 <header>
 </header>
@@ -46,7 +46,7 @@ if($con->connect_error){
   <div class="Header"><h1>Collinet Trotta - Servicio Tecnico</h1></div>
 
 	<div class="MenuSection">
-  		<div class="MenuSearchBar"><input type="text" value="Inserte Busqueda" class="MenuSearchBar"><input type="button" value="Buscar" class="MenuSearchBar">
+  		<div class="MenuSearchBar"><input type="text" value="Inserte Busqueda" class="MenuSearchBar" id=><input type="button" value="Buscar" class="MenuSearchBar">
 	</div>
 	<div class="MenuSection" id="Results">
 	</div>
