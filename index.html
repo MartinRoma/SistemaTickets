@@ -46,7 +46,8 @@
   <div class="Header"><h1>Collinet Trotta - Servicio Tecnico</h1></div>
 
 	<div class="MenuSection">
-  		<div class="MenuSearchBar"><input type="text" value="Inserte Busqueda" class="MenuSearchBar" id=><input type="button" value="Buscar" class="MenuSearchBar">
+  		<div class="MenuSearchBar"><input type="text" value="Inserte Busqueda" class="MenuSearchBar" id="search_value"">
+		<input type="button" value="Buscar" class="MenuSearchBar" onclick="searchDatabase(document.getElementById('search_value').value)">
 	</div>
 	<div class="MenuSection" id="Results">
 	</div>
