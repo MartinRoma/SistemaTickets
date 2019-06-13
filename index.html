@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 	<script type="text/javascript" src="jquery.js"></script>
-	  <script>
-		var menuNav_LastSelected = 'Entradas';
-		function menuNav(menuNav_Selected){
-			var x = document.getElementsByName(menuNav_LastSelected);
-			var i;
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = 'none';
-			}
-			x = document.getElementsByName(menuNav_Selected);
-			var i;
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = 'block';
-			}
-			menuNav_LastSelected = menuNav_Selected;
-		}
-		?>
+	<script>
+	function searchDatabase(str,str2) {
+	  var xhttp;
+	  if (str.length == 0) { 
+	    document.getElementById("Results_value").innerHTML = "";
+	    return;
+	  }
+	  xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	      document.getElementById("Results_value").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "gethint.php?search_value="+str+"&search_category"+str2, true);
+	  xhttp.send();   
+	}
 	  </script>
 <header>
 </header>
